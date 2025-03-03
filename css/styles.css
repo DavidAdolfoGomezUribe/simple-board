@@ -48,7 +48,13 @@ transition: none;
 
 @media screen and (max-width: 1024px) {
     .bodycontainer .maincontainer > article:nth-child(1) {    
-        scale: 2;
+        scale: 2.0;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    .bodycontainer .maincontainer > article:nth-child(1) {    
+        scale: 2.5;
     }
 }
 
@@ -157,6 +163,7 @@ transition: none;
                             flex-direction: column;
                             gap: 0.7vw;
                             
+                            
 
                             >label{
                                 font-family: "Montserrat-Medium.ttf";
@@ -168,17 +175,23 @@ transition: none;
                                 width: 28.81vw;
                                 height: 3.05vw;   
                                 border-radius: 0.28vw;
-                                border: 2px solid  rgba(229, 229, 229, 1);
+                                border: 0.13vw solid  rgba(229, 229, 229, 1);
                                 text-indent: 1.05vw;
-
+                                display: flex;
+                                font-size: 0.83vw;
+                                
                                 
                             }
-
+                            
                             >input::placeholder{
+                                
                                 font-family: "Montserrat-Regular.ttf";
                                 color: rgba(205, 205, 205, 1);
                                 font-size: 0.83vw;
+                                display: flex;
 
+                                
+                                
                             }
 
                         }
@@ -201,7 +214,8 @@ transition: none;
                                 text-indent: 1.05vw;
                                 height: 3.05vw;   
                                 border-radius: 0.28vw;
-                                border: 2px solid  rgba(229, 229, 229, 1);
+                                border: 0.13vw solid  rgba(229, 229, 229, 1);
+                                font-size: 0.83vw;
 
                             }
 
@@ -210,6 +224,7 @@ transition: none;
                                 font-family: "Montserrat-Regular.ttf";
                                 color: rgba(205, 205, 205, 1);
                                 font-size: 0.83vw;
+                                
 
                             }
                         }
