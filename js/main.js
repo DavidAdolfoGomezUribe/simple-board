@@ -1,5 +1,8 @@
 console.log("furula")
 
+
+//main js
+
 document.addEventListener("DOMContentLoaded", async function() {
     try {
         // 1️⃣ Cargar datos desde el JSON
@@ -41,3 +44,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.error("Error al cargar el JSON:", error);
     }
 });
+
+
+
+
+
