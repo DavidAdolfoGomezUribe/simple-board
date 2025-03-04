@@ -1,32 +1,93 @@
-/* Reset básico */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+
+*{margin: 0; padding: 0; outline: 1px solid tomato;}
+*::before, *::after{box-sizing: border-box;}
+body{min-height: 100dvh;}
+input, button, textarea, select{font: inherit;}
+p{text-wrap: pretty;}
+h1, h2, h3, h4, h5, h6{text-wrap: balance;}
+/* img, video, svg{height: auto; max-width: 100%;} */
+@media (prefers-reduced-motion: reduce){
+*, *::before, *::after{
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+max-width: 100%;
+transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
+transition: none;
+}
 }
 
-/* Menú lateral */
+
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0px; /* Oculto por defecto */
-  width: 250px;
+  left: 0px; 
+  width: 18.75vw;
   height: 100vh;
-  background: #333;
+  background: rgba(242, 234, 225, 1);
   color: white;
   padding-top: 60px;
   transition: left 0.3s ease-in-out;
+  
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  color: black;
+
+  >h1{
+    text-align: center;
+    border-left:0.42vw solid rgba(248, 212, 66, 1)  ;
+    font-size: 1.38vw;    
+    width: 15.24vw;
+    margin-top: 1.25vw;
+    }
+
+  >img{
+    margin-top: 3.75vw;   
+    width: 8.88vw;
+    height: 8.88vw;
+  }
+  
+  >h2{
+    margin-top: 1.35vw;   
+    font-size: 1.18vw;
+  }
+
+  >p{
+    margin-top: 0.69vw;   
+    font-size: 0.97vw;
+    color: rgba(254, 175, 0, 1);
+
+  }
+
+  >ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw;
+    list-style: none;  
+    margin-top: 5.55vw;   
+    width: 13.40vw;
+    
+    >li{
+    
+      display: flex;
+      flex-direction: row;
+
+    }
+
+  }
+
+  
+
+
+
+
+
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
 
-.sidebar ul li {
-  padding: 15px;
-  text-align: center;
-}
 
 .sidebar ul li a {
   color: white;
@@ -34,15 +95,15 @@ body {
   display: block;
 }
 
-.sidebar ul li:hover {
-  background: #555;
+.sidebar ul li a:hover {
+  background: rgba(254, 175, 0, 1);
 }
 
 /* Botón de menú */
 .menu-btn {
   position: fixed;
   top: 20px;
-  left: 250px;
+  left: 18.75vw;
   background: #333;
   color: white;
   border: none;
@@ -58,8 +119,9 @@ body {
 
 /* Clase para mostrar el menú */
 .sidebar.show {
-  left: -250px;
+  left: -18.75vw;
 }
 
 .menu-btn.move {
-  left: 0px; /* Ajusta el desplazamiento del botón */}
+  left: 0px; /* Ajusta el desplazamiento del botón */
+}
