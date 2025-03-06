@@ -18,41 +18,81 @@ transition: none;
 }
 
 .headercontainer{
+  background-color: rgba(255, 129, 129, 0.356);
+  
+  position: fixed;
+  transition: left 1s ease-in-out;
+  top: 0;
+  left: 18.75vw;
+  width: 81.25vw; 
+  height: 4.16vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
   /* Botón de menú */
   .menu-btn {
     position: fixed;
-    top: 0px;
+    
     left: 18.75vw;
-    background: #333;
+    background:transparent;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 20px;
+    
+    
+    padding: 1vw 1vw 1vw 2.08vw;
     cursor: pointer;
-    transition: left 0.3s ease-in-out;
+    transition: left 1s ease-in-out;
+    display: flex;
+    align-items: center;
+
+    >img{
+      transition: transform 1s ease-in-out;
+      width: 1.25vw;
+      height: 1.25vw;
+    }
   }
 
   .menu-btn:hover {
-    background: #555;
+    background: rgb(221, 180, 133);
   }
 
 }
 
+.headercontainer.expand{
+  left: 0px;
+  width: 100%; 
+}
 
-
-main{
-  position: absolute;
+.maincontainer{
+  position: fixed;
+  top:calc(2.08vw + 4.16vw ) ;
+  left: 20.83vw;
+  margin-right: 2.08vw;
+  transition: left 1s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  
+  
+  background-color: chocolate;
 
   div{
+    
     position: absolute;
-    top: 5vw;
-    left: 25vw;
+    top: 0vw;
+    left: 0vw;
     height: 20vw;
     width: 20vw;
     background-color: red;
   }
 }
 
+.maincontainer.mainexpand{
+  left: 0px;
+  width: 100%;
+  left: 2.08vw;
+  
+}
 
 
 .sidebar {
@@ -65,7 +105,7 @@ main{
   background: rgba(242, 234, 225, 1);
   color: white;
   padding-top: 60px;
-  transition: left 0.3s ease-in-out;
+  transition: left 1s ease-in-out;
   
   display: flex;
   flex-direction: column;
@@ -161,4 +201,9 @@ main{
 
 .menu-btn.move {
   left: 0px; /* Ajusta el desplazamiento del botón */
+  img{
+    transform: rotate(180deg);
+    
+  }
 }
+
