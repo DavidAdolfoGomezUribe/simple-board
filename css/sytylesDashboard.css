@@ -1,5 +1,7 @@
 
-*{margin: 0; padding: 0; outline: 1px solid tomato;}
+*{margin: 0; padding: 0; 
+  /*outline: 1px solid tomato;*/
+}
 *::before, *::after{box-sizing: border-box;}
 body{min-height: 100dvh;}
 input, button, textarea, select{font: inherit;}
@@ -18,23 +20,23 @@ transition: none;
 }
 
 .headercontainer{
-  background-color: rgba(255, 129, 129, 0.356);
+  
+  background-color: rgb(154, 255, 255);
   
   position: fixed;
   transition: left 1s ease-in-out;
   top: 0;
   left: 18.75vw;
   width: 81.25vw; 
-  height: 4.16vw;
+  height: 4.17vw;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  
   
   /* Botón de menú */
   .menu-btn {
-    position: fixed;
-    
-    left: 18.75vw;
     background:transparent;
     color: white;
     border: none;
@@ -57,6 +59,52 @@ transition: none;
     background: rgb(221, 180, 133);
   }
 
+  >div{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.875vw;
+    margin-right: 3.54vw;
+    height: 2.57vw;
+    
+       
+    
+    >div{
+      width: 14.72vw;
+      height: 2.57vw;
+      border-radius: 0.55vw;
+      border: 0.2vw solid rgba(229, 229, 229, 1);
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+
+      >input{
+        font-size: 1vw;
+        text-indent: 1.05vw;
+        border: none;
+        background: none;
+      }
+
+      >input:focus{
+        outline: none;
+      }
+
+      img{
+        width: 0.98vw;
+        height: 0.98vw;
+      }
+      
+    }
+
+
+    >img{
+      width: 1.18vw;
+      height: 1.38vw;
+    }
+
+  }
+
 }
 
 .headercontainer.expand{
@@ -77,7 +125,7 @@ transition: none;
   background-color: chocolate;
 
   div{
-    
+
     position: absolute;
     top: 0vw;
     left: 0vw;
