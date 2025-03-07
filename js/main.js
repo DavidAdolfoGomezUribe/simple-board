@@ -1,6 +1,7 @@
 console.log("furula")
 
 
+
 //main js
 
 document.addEventListener("DOMContentLoaded", async function() {
