@@ -1,13 +1,63 @@
 //dashboard js
 console.log("its working")
 
+
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        let response = await fetch("../databases/dashboarData.json");
+        let users = await response.json(); // Guardamos los datos cargados
+
+        console.log(users);
+
+        if (users.length > 0) {
+            let studentsCount = users[0].students;
+            let courseCount = users[0].course;
+            let paymentsCount = users[0].payments;
+
+            // Seleccionamos los elementos <span> por su ID
+            const studentsSpan = document.querySelector("#students"); 
+            const courseSpan = document.querySelector("#course");
+            const paymentsSpan = document.querySelector("#payments");
+
+
+            // Verificamos si los elementos existen antes de modificar su contenido
+            if (studentsSpan) {
+                studentsSpan.innerHTML = studentsCount;
+            } else {
+                console.warn("No se encontró el elemento con id 'students'");
+            }
+
+            if (courseSpan) {
+                courseSpan.innerHTML = courseCount;
+            } else {
+                console.warn("No se encontró el elemento con id 'course'");
+            }
+            
+            if (paymentsSpan) {
+                paymentsSpan.innerHTML = paymentsCount;
+            } else {
+                console.warn("No se encontró el elemento con id 'course'");
+            }
+
+
+        } else {
+            console.warn("El JSON está vacío o tiene una estructura incorrecta.");
+        }
+
+    } catch (error) {
+        console.error("Error al cargar el JSON:", error);
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById("menuToggle");
     const sidebar = document.getElementById("sidebar");
     const headercontainer = document.querySelector(".headercontainer");
     const maincontainer = document.querySelector(".maincontainer");
     const listItems = document.querySelectorAll("ul li");
-
+    
+    
     // Guardamos el contenido original del maincontainer
     const originalMainContent = maincontainer.innerHTML;
 
