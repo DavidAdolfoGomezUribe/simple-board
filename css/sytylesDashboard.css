@@ -355,6 +355,8 @@ transition: none;
     flex-shrink: 0;
     height: 6vw;
     margin-top:9.44vw ;
+    align-items: center;
+    margin-bottom:3vw ;
   }
 
 }
