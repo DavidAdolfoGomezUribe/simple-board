@@ -18,7 +18,9 @@
   transition: none;
   }
   }
-
+  body{
+    background-color: rgba(248, 248, 248, 1);
+  }
 .maincontainertwo{
     background-color: red;
 
@@ -59,12 +61,19 @@
     }
 
     >article:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        gap:0.69vw ;
         
         div{            
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
+            height: 5.9vw;
+            background-color: white;
+            border-radius: 0.55vw;
         }
     }
 
