@@ -3,9 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crud-operations-main</title>
+    <title>Crud-operations-dashboard</title>
+    <link rel="stylesheet" href="../css/sytylesDashboard.css">
+    <script src="../js/dashboard.js" defer type="module"></script>
 </head>
 <body>
+
+    <header class="headercontainer">
+        <button id="menuToggle" class="menu-btn"> <img src="../storage/img/buttontoggle.svg" alt=""></button>
+        <!-- Botón para abrir el menú -->
+        <div>
+            <div>
+                <input type="text" placeholder="Search...">
+                <img src="../storage/img/searchIcon.svg" alt="">
+            </div>
+
+            <img src="../storage/img/bellIcon.svg" alt="">
+
+        </div>
+        
+
+    </header>
+    
+    <main class="maincontainer"> 
+
+        <!-- <section>
+            <article>
+            
+                <div>
+                    <img src="../storage/img/graduationCardIcon.svg" alt="">
+                    <p>Students</p>
+                </div>
+                
+                <span id="students"></span>
+            </article>
+                
+            <article>
+            
+                <div>
+                    <img src="../storage/img/bookmarkCardIcon.svg" alt="">
+                    <p>Course</p>
+                </div>
+
+                <span id="course"></span>
+                
+            </article>
+                        
+            <article>
+            
+                <div>
+                    <img src="../storage/img/usd-squareCardIcon.svg" alt="">
+                    <p>Payments</p>
+                </div>
+            
+                <span id="payments"></span>
+                
+            </article>
+            
+            <article>
+                <div>
+                    <img src="../storage/img/UserCardIcon.svg" alt="">
+                    <p>Users</p>
+                </div>
+
+                <span id="users"></span>
+            
+            </article>
+             -->
+            <!-- for adding more "cards" -->
+            <!-- <article>
+                a
+            </article>
+                
+            <article>
+                b
+            </article>
+            
+            <article>
+                c
+            </article>
+            
+            <article>
+                d
+            </article> -->
+        
+        </section>
+
+    </main>
+
+    <!-- Menú lateral -->
+    <nav id="sidebar" class="sidebar">
+        <h1>CRUD OPERATIONS</h1>
+        <img src="../storage/img/profile.png" alt="">
+        <h2>Karthi Madesh</h2>
+        <p>Admin</p>
+        
+        <ul>
+            <li data-option="home" class="active">
+                
+                <img src="../storage/img/HomeIcon.svg" alt="">
+                <button>Home</button>
+                
+            </li>
+             
+            <li data-option="course">
+                <img src="../storage/img/CourseIcon.svg" alt="">
+                <button>Course</button>
+            </li>
+
+             <li data-option="students">
+                <img src="../storage/img/StudentsIcon.svg" alt="">
+                <button>Students</button>
+            </li>
+            
+            <li data-option="payment">
+                <img src="../storage/img/PaymentIcon.svg" alt="">
+                <button>Payment</button>
+            </li>
+            
+            <li data-option="report">
+                <img src="../storage/img/ReportIcon.svg" alt="">
+                <button>Report</button>
+            </li>
+            
+            <li data-option="settings">
+                <img src="../storage/img/SettingsIcon.svg" alt="">
+                <button>Settings</button>
+            </li>
+            
+        </ul>
+        
+        <!-- logout-->
+        <div>
+            <p>Logout</p>
+            <img src="../storage/img/sign-out-alt 1.svg" alt="">
+            
+        </div>
+     
+    </nav>
+
+
+    <h1>Esto es una prueba</h1>
+
     
 </body>
 </html>
