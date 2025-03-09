@@ -48,7 +48,7 @@ form{
 }
 
 .studentscontainer{
-  z-index: -1;
+  
     background-color: blue;
     position: absolute;
     top: 0vw;

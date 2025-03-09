@@ -1,43 +1,48 @@
 const express = require("express");
-const cors = require("cors");
 const fs = require("fs");
-
+const cors = require("cors");
 const app = express();
 const PORT = 3000;
-const DATA_FILE = "./databases/students.json";
 
-app.use(cors());
-app.use(express.json()); // Middleware para recibir JSON
+// Middleware
+app.use(express.json()); // Para leer JSON en el body
+app.use(cors()); // Para evitar problemas de CORS
 
-// Obtener lista de estudiantes
+// Ruta para obtener estudiantes
 app.get("/students", (req, res) => {
-    fs.readFile(DATA_FILE, "utf8", (err, data) => {
+    fs.readFile("./databases/students.json", "utf8", (err, data) => {
         if (err) {
-            return res.status(500).json({ error: "Error leyendo el archivo" });
+            return res.status(500).json({ error: "Error al leer el archivo" });
         }
         res.json(JSON.parse(data));
     });
 });
 
-// Agregar un nuevo estudiante
+// Ruta para agregar un estudiante
 app.post("/students", (req, res) => {
-    fs.readFile(DATA_FILE, "utf8", (err, data) => {
+    fs.readFile("./databases/students.json", "utf8", (err, data) => {
         if (err) {
-            return res.status(500).json({ error: "Error leyendo el archivo" });
+            return res.status(500).json({ error: "Error al leer el archivo" });
         }
 
         let students = JSON.parse(data);
-        students.push(req.body); // Agrega el nuevo estudiante
+        const newStudent = req.body;
 
-        fs.writeFile(DATA_FILE, JSON.stringify(students, null, 2), "utf8", (err) => {
+        // Añadir la foto por defecto
+        newStudent.photo = "../storage/img/students/example.png";
+
+        students.push(newStudent);
+
+        fs.writeFile("./databases/students.json", JSON.stringify(students, null, 2), "utf8", (err) => {
             if (err) {
-                return res.status(500).json({ error: "Error guardando el archivo" });
+                return res.status(500).json({ error: "Error al guardar el archivo" });
             }
-            res.json({ message: "Estudiante agregado", student: req.body });
+            res.status(201).json({ message: "Estudiante agregado", student: newStudent });
         });
     });
 });
 
+// Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
