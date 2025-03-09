@@ -22,7 +22,33 @@
     background-color: rgba(248, 248, 248, 1);
   }
 
+
+/* Dialog*/
+.newstudentform{
+position: fixed;
+width: 35vw;
+height: 20vw;
+display: flex;
+flex-direction: column;
+place-self: center;
+align-items: center;
+justify-content: center;
+form{
+
+  fieldset{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 1vw;
+    
+  }
+  
+}
+  
+}
+
 .studentscontainer{
+  z-index: -1;
     background-color: blue;
     position: absolute;
     top: 0vw;

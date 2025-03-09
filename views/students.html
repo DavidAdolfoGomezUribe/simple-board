@@ -7,8 +7,23 @@
     <!-- <script type="module" src="../js/students.js" async></script> -->
 </head>
 <body>
-    
-        <section class="studentscontainer">
+        <dialog  id="studentModal" class="newstudentform"  open >
+                <form  id="studentForm">
+
+                    <fieldset>
+                        <legend>New Student Form</legend>
+                        <label for="name">Name:</label><input type="text" id="name" required> 
+                        <label for="email">Email:</label><input type="email" id="email" required>
+                        <label for="phone">Phone:</label><input type="tel" id="phone" required>
+                        <label for="enrollnumber">Enrollnumber:</label><input type="number" id="enrollnumber" required>
+                        <label for="date">Date:</label><input type="datetime-local" id="date" required>
+                        
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                    <button type="button" id="closeModal">Cancel</button>
+                </form>
+            </dialog>
+                <section class="studentscontainer" >
             <article> 
                 <h1>Students List</h1>
 

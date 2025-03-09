@@ -1,41 +1,40 @@
-console.log("work work");
-
 async function loadStudents() {
     try {
-        console.log("work work2");
-
-        let response = await fetch("../databases/students.json");
+        let response = await fetch("http://localhost:3000/students");
         let students = await response.json();
+        studentListContainer.innerHTML = "";
 
-        const studentListContainer = document.querySelector(".studentlistcontainer");
-
-        if (!studentListContainer) {
-            console.error("No se encontró el contenedor de estudiantes.");
-            return;
-        }
-
-        if (students.length > 0) {
-            students.forEach(student => {
-                let studentDiv = document.createElement("div");
-                studentDiv.innerHTML = `
-                    <img src="${student.photo}" alt="Foto de ${student.name}">
-                    <p>${student.name}</p>
-                    <p>${student.email}</p>
-                    <p>${student.phone}</p>
-                    <p>${student.enrollnumber}</p>
-                    <p>${student.date}</p>
-                    <img src="../storage/img/edit.png" alt="Edit">
-                    <img src="../storage/img/delete.png" alt="Delete">
-                `;
-                studentListContainer.appendChild(studentDiv);
-            });
-        } else {
-            console.warn("No hay estudiantes en la base de datos.");
-        }
+        students.forEach(student => {
+            let studentDiv = document.createElement("div");
+            studentDiv.innerHTML = `
+                <img src="${student.photo}" alt="Foto de ${student.name}">
+                <p>${student.name}</p>
+                <p>${student.email}</p>
+                <p>${student.phone}</p>
+                <p>${student.enrollnumber}</p>
+                <p>${student.date}</p>
+                <img src="../storage/img/edit.png" alt="Edit">
+                <img src="../storage/img/delete.png" alt="Delete">
+            `;
+            studentListContainer.appendChild(studentDiv);
+        });
     } catch (error) {
         console.error("Error al cargar los estudiantes:", error);
     }
 }
 
-// Espera a que el JS sea importado y ejecutado
-loadStudents();
+async function addStudent(newStudent) {
+    try {
+        let response = await fetch("http://localhost:3000/students", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newStudent)
+        });
+
+        let result = await response.json();
+        console.log(result);
+        loadStudents(); // Recargar lista de estudiantes
+    } catch (error) {
+        console.error("Error al agregar estudiante:", error);
+    }
+}
