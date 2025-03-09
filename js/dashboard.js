@@ -85,18 +85,20 @@ document.addEventListener("DOMContentLoaded", async function () {
                         let studentsHtml = await studentsResponse.text();
                         maincontainer.innerHTML = studentsHtml;
 
-                        // Agregar CSS específico de students
+                        //Agregar CSS específico de students
                         let studentsCSS = document.createElement("link");
                         studentsCSS.rel = "stylesheet";
-                        studentsCSS.href = "../css/styleStudents.css";
+                        studentsCSS.href = "../css/stytleStudetns.css";
                         studentsCSS.id = "studentsCSS";
                         document.head.appendChild(studentsCSS);
 
-                        // Agregar JS específico de students
+                        //Agregar JS específico de students
                         let studentsScript = document.createElement("script");
                         studentsScript.src = "../js/students.js";
                         studentsScript.id = "studentsJS";
-                        document.body.appendChild(studentsScript);
+                        studentsScript.defer = true;
+                        document.head.appendChild(studentsScript);
+                    
                     } else if (option === "home") {
                         // Restaurar contenido del Dashboard
                         renderDashboardData();

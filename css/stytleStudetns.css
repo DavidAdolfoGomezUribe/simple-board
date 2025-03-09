@@ -21,17 +21,6 @@
   body{
     background-color: rgba(248, 248, 248, 1);
   }
-.maincontainertwo{
-    background-color: red;
-
-    position: fixed;
-    top:calc(2.08vw + 4.16vw ) ;
-    left: 20.83vw;
-    margin-right: 2.08vw;
-    transition: left 1s ease-in-out;
-    width: 100vw;
-    height: 100vh;
-  }
 
 .studentscontainer{
     background-color: blue;

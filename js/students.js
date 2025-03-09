@@ -1,13 +1,21 @@
-document.addEventListener("DOMContentLoaded", async function () {
+console.log("work work");
+
+async function loadStudents() {
     try {
+        console.log("work work2");
+
         let response = await fetch("../databases/students.json");
         let students = await response.json();
 
         const studentListContainer = document.querySelector(".studentlistcontainer");
 
+        if (!studentListContainer) {
+            console.error("No se encontró el contenedor de estudiantes.");
+            return;
+        }
+
         if (students.length > 0) {
             students.forEach(student => {
-                
                 let studentDiv = document.createElement("div");
                 studentDiv.innerHTML = `
                     <img src="${student.photo}" alt="Foto de ${student.name}">
@@ -27,4 +35,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     } catch (error) {
         console.error("Error al cargar los estudiantes:", error);
     }
-});
+}
+
+// Espera a que el JS sea importado y ejecutado
+loadStudents();
