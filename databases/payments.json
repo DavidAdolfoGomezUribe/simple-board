@@ -1,0 +1,27 @@
+[
+    {   
+        "name":"Pedro Perez",
+        "paymentschedule":"First",
+        "billNumber":"00012223",
+        "amountpaid":"INR 35,000",
+        "balanceamount":"INR 55,000",
+        "date": "2025-03-09T19:50"
+    },
+    {   
+        "name":"Andres Rodriguez",
+        "paymentschedule":"First",
+        "billNumber":"00012224",
+        "amountpaid":"INR 36,000",
+        "balanceamount":"INR 56,000",
+        "date": "2025-03-09T19:50"
+    },
+    {   
+        "name":"Juan Paz",
+        "paymentschedule":"First",
+        "billNumber":"00012225",
+        "amountpaid":"INR 37,000",
+        "balanceamount":"INR 58,000",
+        "date": "2025-03-09T19:50"
+    }
+
+]
