@@ -1,0 +1,201 @@
+
+*{margin: 0; padding: 0; 
+    /*outline: 1px solid tomato;*/
+  }
+  *::before, *::after{box-sizing: border-box;}
+  body{min-height: 100dvh;}
+  input, button, textarea, select{font: inherit;}
+  p{text-wrap: pretty;}
+  h1, h2, h3, h4, h5, h6{text-wrap: balance;}
+  /* img, video, svg{height: auto; max-width: 100%;} */
+  @media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  max-width: 100%;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+  transition: none;
+  }
+  }
+
+  @font-face {
+    font-family: "Montserrat-Bold.ttf";
+    src: url(../storage/fonts/Montserrat-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: "Montserrat-SemiBold.ttf";
+    src: url(../storage/fonts/Montserrat-SemiBold.ttf);
+  }
+  
+  @font-face {
+    font-family: "Montserrat-Regular.ttf";
+    src: url(../storage/fonts/Montserrat-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: "Montserrat-Medium.ttf";
+    src: url(../storage/fonts/Montserrat-Medium.ttf);
+  }
+  
+  body{
+    background-color: rgba(248, 248, 248, 1);
+  }
+
+  .paymentcontainer{
+
+      
+      position: absolute;
+      padding-right: 0.5vw;
+      top: 0vw;
+      left: 0vw;
+      height: 100vh;
+      width: 77.08vw;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: no-wrap;
+      justify-content: start;
+      gap:2.08vw ;
+      align-content: center;
+      flex-shrink: 0;
+      overflow-y: scroll;
+
+    >article:nth-child(1){
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;        
+        width: 100%;
+        height: 3.05vw;
+
+        >h1{
+          font-family: "Montserrat-Bold.ttf";
+          font-size: 1.52vw;
+
+        }
+
+
+        img{
+        width: 0.97vw;
+        height: 1.52vw;
+        }
+          
+
+
+
+    }
+
+    >article:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1.5vw;
+        >div:nth-child(1){
+          width: 100%;
+          height:0.2vw ;
+          background-color: rgba(229, 229, 229, 1);
+        }
+        >div:nth-child(2){
+          
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          margin-left:0.90vw;
+          
+          >p{
+            font-family: "Montserrat-SemiBold.ttf";
+            color:rgba(172, 172, 172, 1);
+            font-size: 0.83vw;          
+          }
+
+          >p:nth-child(1){
+            width: 11.04vw;
+                        
+          }
+          
+          >p:nth-child(2){
+            width: 13.19vw;
+            
+           }
+           
+          >p:nth-child(3){
+            width: 11.31vw;
+            
+          }
+          >p:nth-child(4){
+            width: 12.36vw;
+            
+          }
+
+          >p:nth-child(5){
+            width: 12.36vw;
+            
+          }
+
+          >p:nth-child(6){
+            
+            
+          }
+        }
+    }
+
+    >article:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        gap:0.69vw ;
+        
+        div{       
+            font-size: 0.97vw;     
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 5.9vw;
+            background-color: white;
+            border-radius: 0.55vw;
+            font-family: "Montserrat-Regular.ttf";
+            margin-left:0.90vw;
+
+            >p:nth-child(1){
+                width: 11.04vw;
+                            
+              }
+              
+            >p:nth-child(2){
+            width: 13.19vw;
+            
+            }
+            
+            >p:nth-child(3){
+            width: 11.31vw;
+            
+            }
+            >p:nth-child(4){
+            width: 12.36vw;
+            
+            }
+
+            >p:nth-child(5){
+            width: 12.36vw;
+            
+            }
+
+            >p:nth-child(6){
+            width: 13.12vw;
+            
+            }
+
+            >img:nth-child(7){
+                width: 1.04vw;
+                height: 1vw;
+            }
+        }
+    }
+
+
+
+    }

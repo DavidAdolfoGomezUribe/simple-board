@@ -21,7 +21,7 @@ Muestra los pagos hechos hasta la fecha de los distintos perfilies
 
 ## Disclaimer
 
-Para poder ejecutar correctamente el proyecto es necesario instalar los siguientes modulos desde el terminal.
+Para poder ejecutar correctamente el proyecto es necesario descargar el repositorio, instalar los siguientes modulos desde el terminal y ejecutar el servidor.
 
 ```
 npm install express cors fs
@@ -37,3 +37,5 @@ nodemon server.js  //Para crear un servidor que se actualice automaticamente ape
 ```
 
 Node.js es necesario.
+
+Una vez hecho esto, con el servidor encendido se puede interactuar desde github.
