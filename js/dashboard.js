@@ -70,45 +70,75 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             listItems.forEach(li => {
                 li.addEventListener("click", async function () {
-                    // Quitar la clase "active" de todos los <li>
-                    listItems.forEach(item => item.classList.remove("active"));
+                  // Quitar la clase "active" de todos los <li>
+                  listItems.forEach(item => item.classList.remove("active"));
+                  // Agregar "active" solo al <li> seleccionado
+                  this.classList.add("active");
+              
+                  // Obtener el valor del atributo data-option
+                  const option = this.getAttribute("data-option");
+              
+                  if (option === "students") {
+                    // Cargar students.html dentro de maincontainer
+                    let studentsResponse = await fetch("students.html");
+                    let studentsHtml = await studentsResponse.text();
+                    maincontainer.innerHTML = studentsHtml;
+              
+                    // Agregar CSS específico de students
+                    let studentsCSS = document.createElement("link");
+                    studentsCSS.rel = "stylesheet";
+                    studentsCSS.href = "../css/stytleStudetns.css";
+                    studentsCSS.id = "studentsCSS";
+                    document.head.appendChild(studentsCSS);
+              
+                    // Agregar JS específico de students
+                    let studentsScript = document.createElement("script");
+                    studentsScript.src = "../js/students.js";
+                    studentsScript.id = "studentsJS";
+                    studentsScript.defer = true;
+                    document.head.appendChild(studentsScript);
+              
+                    document.getElementById("paymentCss")?.remove();
+                    document.getElementById("paymentsJS")?.remove();
+              
+                  } else if (option === "payment") {
+                    // Cargar payments.html dentro de maincontainer
+                    let paymentsResponse = await fetch("payments.html");
+                    let paymentHtml = await paymentsResponse.text();
+                    maincontainer.innerHTML = paymentHtml;
+              
+                    // Agregar CSS específico de payments
+                    let paymentsCSS = document.createElement("link");
+                    paymentsCSS.rel = "stylesheet";
+                    paymentsCSS.href = "../css/sylesPayments.css";
+                    paymentsCSS.id = "paymentCss";
+                    document.head.appendChild(paymentsCSS);
 
-                    // Agregar "active" solo al <li> seleccionado
-                    this.classList.add("active");
-
-                    // Obtener el valor del atributo data-option
-                    const option = this.getAttribute("data-option");
-
-                    if (option === "students") {
-                        // Cargar students.html dentro del maincontainer
-                        let studentsResponse = await fetch("students.html");
-                        let studentsHtml = await studentsResponse.text();
-                        maincontainer.innerHTML = studentsHtml;
-
-                        //Agregar CSS específico de students
-                        let studentsCSS = document.createElement("link");
-                        studentsCSS.rel = "stylesheet";
-                        studentsCSS.href = "../css/stytleStudetns.css";
-                        studentsCSS.id = "studentsCSS";
-                        document.head.appendChild(studentsCSS);
-
-                        //Agregar JS específico de students
-                        let studentsScript = document.createElement("script");
-                        studentsScript.src = "../js/students.js";
-                        studentsScript.id = "studentsJS";
-                        studentsScript.defer = true;
-                        document.head.appendChild(studentsScript);
+                    let paymentScript = document.createElement("script");
+                    paymentScript.src = "../js/payments.js";
+                    paymentScript.id = "paymentsJS";
+                    paymentScript.defer = true;
+                    document.head.appendChild(paymentScript);
                     
-                    } else if (option === "home") {
-                        // Restaurar contenido del Dashboard
-                        renderDashboardData();
 
-                        // Eliminar CSS y JS de students
-                        document.getElementById("studentsCSS")?.remove();
-                        document.getElementById("studentsJS")?.remove();
-                    }
+              
+                    // Eliminar CSS y JS de students si existen
+                    document.getElementById("studentsCSS")?.remove();
+                    document.getElementById("studentsJS")?.remove();
+              
+                  } else if (option === "home") {
+                    // Restaurar contenido del Dashboard
+                    renderDashboardData();
+              
+                    // Eliminar CSS y JS de students y payments si existen
+                    document.getElementById("studentsCSS")?.remove();
+                    document.getElementById("studentsJS")?.remove();
+                    document.getElementById("paymentCss")?.remove();
+                    document.getElementById("paymentsJS")?.remove();
+                  }
                 });
-            });
+              });
+
         } else {
             console.warn("El JSON está vacío o tiene una estructura incorrecta.");
         }

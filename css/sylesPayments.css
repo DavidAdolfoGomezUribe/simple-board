@@ -135,10 +135,10 @@
             
           }
 
-          >p:nth-child(6){
+          /* >p:nth-child(6){
             
             
-          }
+          } */
         }
     }
 
@@ -158,7 +158,8 @@
             background-color: white;
             border-radius: 0.55vw;
             font-family: "Montserrat-Regular.ttf";
-            margin-left:0.90vw;
+            
+            padding-left: 0.90vw;
 
             >p:nth-child(1){
                 width: 11.04vw;
@@ -197,5 +198,24 @@
     }
 
 
-
     }
+
+    .paymentcontainer::-webkit-scrollbar {
+        width: 0.5vw;   /* Ancho del scrollbar vertical */
+        height: 1vw;  /* Alto del scrollbar horizontal */
+        
+      }
+      
+      .paymentcontainer::-webkit-scrollbar-track {
+        background: #ffffff00;
+      }
+      
+      .paymentcontainer::-webkit-scrollbar-thumb {
+        background-color:  rgba(253, 183, 32, 0.151);
+        border-radius: 0.25vw;
+        border: none;
+        
+      }
+      .paymentcontainer::-webkit-scrollbar-thumb:hover {
+        background-color:  rgba(255, 193, 58, 0.603);
+      }
