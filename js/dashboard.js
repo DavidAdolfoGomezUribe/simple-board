@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             });
 
             listItems.forEach(li => {
-                li.addEventListener("click", function () {
+                li.addEventListener("click", async function () {
                     // Quitar la clase "active" de todos los <li>
                     listItems.forEach(item => item.classList.remove("active"));
 
@@ -80,15 +80,32 @@ document.addEventListener("DOMContentLoaded", async function () {
                     const option = this.getAttribute("data-option");
 
                     if (option === "students") {
-                        // Si seleccionamos "Students", limpiamos el maincontainer y agregamos un <h1>Hola</h1>
-                        maincontainer.innerHTML = "<h1>Hola</h1>";
+                        // Cargar students.html dentro del maincontainer
+                        let studentsResponse = await fetch("students.html");
+                        let studentsHtml = await studentsResponse.text();
+                        maincontainer.innerHTML = studentsHtml;
 
+                        //Agregar CSS específico de students
+                        let studentsCSS = document.createElement("link");
+                        studentsCSS.rel = "stylesheet";
+                        studentsCSS.href = "../css/stytleStudetns.css";
+                        studentsCSS.id = "studentsCSS";
+                        document.head.appendChild(studentsCSS);
 
-
-                        
+                        //Agregar JS específico de students
+                        let studentsScript = document.createElement("script");
+                        studentsScript.src = "../js/students.js";
+                        studentsScript.id = "studentsJS";
+                        studentsScript.defer = true;
+                        document.head.appendChild(studentsScript);
+                    
                     } else if (option === "home") {
-                        // Si volvemos a "Home", restauramos el contenido original con los datos
+                        // Restaurar contenido del Dashboard
                         renderDashboardData();
+
+                        // Eliminar CSS y JS de students
+                        document.getElementById("studentsCSS")?.remove();
+                        document.getElementById("studentsJS")?.remove();
                     }
                 });
             });

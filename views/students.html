@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- <link rel="stylesheet" href="../css/stytleStudetns.css"> -->
+    <!-- <script type="module" src="../js/students.js" async></script> -->
+</head>
+<body>
+
+    <!-- Formato para agregar estudiantes -->
+    <dialog id="studentModal" class="newstudentform">
+        <form method="dialog" id="studentForm">
+          <fieldset>
+            <legend>New Student Form</legend>
+            <label for="photo">Photo:</label>
+            <input type="file" accept="image/*" id="photo" name="photo">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="enrollnumber">Enrollnumber:</label>
+            <input type="number" id="enrollnumber" name="enrollnumber" required>
+            
+            <label for="date">Date:</label>
+            <input type="datetime-local" id="date" name="date" required>
+          </fieldset>
+          <button type="submit">Submit</button>
+          <button type="button" id="closeModal">Cancel</button>
+        </form>
+    </dialog>
+
+    <!-- Formato para editar estudiantes -->
+    <dialog id="editStudentModal" class="newstudentform" >
+        <form id="editStudentForm">
+          <fieldset>
+            <legend>Edit Student</legend>
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" required>
+            
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" required>
+            
+            <label for="editPhone">Phone:</label>
+            <input type="tel" id="editPhone" required>
+            
+            <label for="editEnrollnumber">Enrollnumber:</label>
+            <input type="number" id="editEnrollnumber" required>
+            
+            <label for="editDate">Date:</label>
+            <input type="datetime-local" id="editDate" required>
+          </fieldset>
+          <button type="submit">Save Changes</button>
+          <button type="button" id="closeEditModal">Cancel</button>
+        </form>
+      </dialog>
+       
+
+
+        <section class="studentscontainer" >
+            
+            <article> 
+                <h1>Students List</h1>
+
+                <div>
+                    <img src="../storage/img/sortStudentsIcon.svg" alt="">
+                    <button id="addStudentButton">
+                        ADD NEW STUDENT
+                    </button>
+                </div>
+                
+            </article>
+            
+            
+            <article>
+                <div>
+                    <!-- esto es solo una linea ** no eliminar div ** -->
+                </div>
+                <div>
+                    <p>Name</p>
+                    <p>Email</p>
+                    <p>Phone</p>
+                    <p>Enroll Number</p>
+                    <p>Date of admission</p>
+                </div>
+                
+            </article>
+
+            <article class="studentlistcontainer">
+                
+                
+                <!-- plantilla -->
+                <!-- <div>
+                    <img src="" alt="">
+                    <p>Karthi</p>
+                    <p>karthi@gmmail.com</p>
+                    <p>7305477760</p>
+                    <p>1234567305477760</p>
+                    <p>08-Dec, 2021</p>
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div> -->
+
+            </article>
+
+
+            
+
+        </section>  
+        
+        
+    
+    
+</body>
+</html>
