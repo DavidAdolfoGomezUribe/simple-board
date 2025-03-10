@@ -1,34 +1,18 @@
 [
   {
-    "photo": "../storage/img/students/example.png",
-    "name": "juan perez",
-    "email": "juan@gmail.com",
-    "phone": "1234567890",
+    "photo": "../storage/img/students/licenciadogallardo.png",
+    "name": "Gallardo Perez",
+    "email": "lic.gallardo@gmail.com",
+    "phone": "123",
     "enrollnumber": "1",
-    "date": "08-03-2025"
+    "date": "2025-03-09T19:50"
   },
   {
-    "photo": "../storage/img/students/example.png",
-    "name": "juan perez",
-    "email": "juan@gmail.com",
-    "phone": "1234567890",
-    "enrollnumber": "1",
-    "date": "08-03-2025"
-  },
-  {
-    "photo": "../storage/img/students/example.png",
-    "name": "juan perez",
-    "email": "juan@gmail.com",
-    "phone": "1234567890",
-    "enrollnumber": "1",
-    "date": "08-03-2025"
-  },
-  {
-    "name": "asd",
-    "email": "1@gmail.com",
-    "phone": "321",
-    "enrollnumber": "4",
-    "date": "2025-02-28T18:10",
-    "photo": "../storage/img/students/example.png"
+    "photo": "../storage/img/students/ingpugberto.png",
+    "name": "Pugberto Rojas",
+    "email": "ingpugberto@gmail.com",
+    "phone": "123",
+    "enrollnumber": "2",
+    "date": "2025-03-09T20:22"
   }
 ]

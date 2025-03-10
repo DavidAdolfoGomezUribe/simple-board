@@ -67,34 +67,35 @@ async function setupStudentModal() {
     // Manejar el envío del formulario
     studentForm.addEventListener("submit", async (e) => {
         e.preventDefault();
+        const formData = new FormData();
 
-        const newStudent = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            enrollnumber: document.getElementById("enrollnumber").value,
-            date: document.getElementById("date").value
-        };
+
+        formData.append("photo", document.getElementById("photo").files[0]);
+        
+        formData.append("name", document.getElementById("name").value);
+        formData.append("email", document.getElementById("email").value);
+        formData.append("phone", document.getElementById("phone").value);
+        formData.append("enrollnumber", document.getElementById("enrollnumber").value);
+        formData.append("date", document.getElementById("date").value);
+
 
         try {
             let response = await fetch("http://localhost:3000/students", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(newStudent)
+              method: "POST",
+              body: formData
+              
             });
-
+        
             if (response.ok) {
-                alert("Estudiante agregado exitosamente!");
-                studentModal.close();
-                loadStudents(); // Recargar la lista
+              alert("Estudiante agregado exitosamente!");
+              studentModal.close();
+              loadStudents(); // Recargar la lista actualizada
             } else {
-                alert("Error al agregar estudiante");
+              alert("Error al agregar estudiante");
             }
-        } catch (error) {
+          } catch (error) {
             console.error("Error:", error);
-        }
+          }
     });
 }
 
