@@ -151,15 +151,38 @@ dialog:not([open]) {
           
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           margin-left: 7.57vw;
-          margin-right: 13.81vw;
+          
           >p{
             font-family: "Montserrat-SemiBold.ttf";
             color:rgba(172, 172, 172, 1);
             font-size: 0.83vw;          
           }
+
+          >p:nth-child(1){
+            width: 10.97vw;
+            
+          }
           
+          >p:nth-child(2){
+            width: 13.20vw;
+            
+           }
+           
+          >p:nth-child(3){
+            width: 8.75vw;
+            
+          }
+          >p:nth-child(4){
+            width: 15vw;
+            
+          }
+
+          >p:nth-child(5){
+            width: 15.48vw;
+            
+          }
         }
     }
 
@@ -172,7 +195,7 @@ dialog:not([open]) {
             font-size: 0.97vw;     
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             width: 100%;
             height: 5.9vw;
@@ -180,9 +203,47 @@ dialog:not([open]) {
             border-radius: 0.55vw;
             font-family: "Montserrat-Regular.ttf";
 
-            img{
+            >img:nth-child(1){
+              border-radius: 0.55vw;
               width: 4.51vw;
               height: 3.82vw;
+              margin-left: 0.9vw;
+            }
+            >p:nth-child(2){
+              margin-left: 2.15vw;
+              width: 10.97vw;
+            
+            }
+
+            >p:nth-child(3){
+              width: 13.20vw;
+            
+            }
+            >p:nth-child(4){
+              width: 8.75vw;
+            
+            }
+
+            >p:nth-child(5){
+              width: 15vw;
+            
+            }
+            >p:nth-child(6){
+              width: 15.48vw;
+            
+            }
+
+            >img:nth-child(7){
+              width: 1.32vw;
+              height: 1.32vw;
+              cursor: pointer;
+              margin-right: 2.30vw;
+            }
+
+            >img:nth-child(8){
+              cursor: pointer;
+              width: 1.11vw;
+              height: 1.25vw;
             }
         }
     }

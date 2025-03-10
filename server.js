@@ -65,3 +65,53 @@ app.post("/students", upload.single("photo"), (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+// Endpoint para actualizar un estudiante (usando índice, por ejemplo)
+app.put("/students/:index", (req, res) => {
+    fs.readFile(DATA_FILE, "utf8", (err, data) => {
+      if (err) {
+        return res.status(500).json({ error: "Error al leer el archivo" });
+      }
+  
+      let students = JSON.parse(data);
+      const index = parseInt(req.params.index, 10);
+      if (index < 0 || index >= students.length) {
+        return res.status(404).json({ error: "Estudiante no encontrado" });
+      }
+  
+      // Actualiza el estudiante (puedes ajustar según tus necesidades)
+      students[index] = { ...students[index], ...req.body };
+  
+      fs.writeFile(DATA_FILE, JSON.stringify(students, null, 2), "utf8", (err) => {
+        if (err) {
+          return res.status(500).json({ error: "Error al guardar el archivo" });
+        }
+        res.json({ message: "Estudiante actualizado", student: students[index] });
+      });
+    });
+  });
+
+// Delete para eliminar un estudiante
+app.delete("/students/:index", (req, res) => {
+    fs.readFile(DATA_FILE, "utf8", (err, data) => {
+      if (err) {
+        return res.status(500).json({ error: "Error al leer el archivo" });
+      }
+  
+      let students = JSON.parse(data);
+      const index = parseInt(req.params.index, 10);
+      if (index < 0 || index >= students.length) {
+        return res.status(404).json({ error: "Estudiante no encontrado" });
+      }
+  
+      // Elimina el estudiante
+      students.splice(index, 1);
+  
+      fs.writeFile(DATA_FILE, JSON.stringify(students, null, 2), "utf8", (err) => {
+        if (err) {
+          return res.status(500).json({ error: "Error al guardar el archivo" });
+        }
+        res.json({ message: "Estudiante eliminado exitosamente" });
+      });
+    });
+  });

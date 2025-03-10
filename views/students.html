@@ -7,6 +7,8 @@
     <!-- <script type="module" src="../js/students.js" async></script> -->
 </head>
 <body>
+
+    <!-- Formato para agregar estudiantes -->
     <dialog id="studentModal" class="newstudentform">
         <form method="dialog" id="studentForm">
           <fieldset>
@@ -33,8 +35,36 @@
           <button type="button" id="closeModal">Cancel</button>
         </form>
     </dialog>
+
+    <!-- Formato para editar estudiantes -->
+    <dialog id="editStudentModal" class="newstudentform" >
+        <form id="editStudentForm">
+          <fieldset>
+            <legend>Edit Student</legend>
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" required>
+            
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" required>
+            
+            <label for="editPhone">Phone:</label>
+            <input type="tel" id="editPhone" required>
+            
+            <label for="editEnrollnumber">Enrollnumber:</label>
+            <input type="number" id="editEnrollnumber" required>
+            
+            <label for="editDate">Date:</label>
+            <input type="datetime-local" id="editDate" required>
+          </fieldset>
+          <button type="submit">Save Changes</button>
+          <button type="button" id="closeEditModal">Cancel</button>
+        </form>
+      </dialog>
        
+
+
         <section class="studentscontainer" >
+            
             <article> 
                 <h1>Students List</h1>
 
@@ -50,7 +80,7 @@
             
             <article>
                 <div>
-                    
+                    <!-- esto es solo una linea ** no eliminar div ** -->
                 </div>
                 <div>
                     <p>Name</p>
@@ -59,7 +89,7 @@
                     <p>Enroll Number</p>
                     <p>Date of admission</p>
                 </div>
-
+                
             </article>
 
             <article class="studentlistcontainer">
