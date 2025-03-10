@@ -14,5 +14,53 @@
     "phone": "1234",
     "enrollnumber": "2",
     "date": "2025-03-09T20:22"
+  },
+  {
+    "photo": "../storage/img/students/licenciadogallardo.png",
+    "name": "Gallardo Perez",
+    "email": "lic.gallardo@gmail.com",
+    "phone": "123",
+    "enrollnumber": "1",
+    "date": "2025-03-09T19:50"
+  },
+  {
+    "photo": "../storage/img/students/ingpugberto.png",
+    "name": "Pugberto Rojas",
+    "email": "ing.pugberto@gmail.com",
+    "phone": "1234",
+    "enrollnumber": "2",
+    "date": "2025-03-09T20:22"
+  },
+  {
+    "photo": "../storage/img/students/licenciadogallardo.png",
+    "name": "Gallardo Perez",
+    "email": "lic.gallardo@gmail.com",
+    "phone": "123",
+    "enrollnumber": "1",
+    "date": "2025-03-09T19:50"
+  },
+  {
+    "photo": "../storage/img/students/ingpugberto.png",
+    "name": "Pugberto Rojas",
+    "email": "ing.pugberto@gmail.com",
+    "phone": "1234",
+    "enrollnumber": "2",
+    "date": "2025-03-09T20:22"
+  },
+  {
+    "photo": "../storage/img/students/ingpugberto.png",
+    "name": "Pugberto Rojas",
+    "email": "ing.pugberto@gmail.com",
+    "phone": "1234",
+    "enrollnumber": "2",
+    "date": "2025-03-09T20:22"
+  },
+  {
+    "photo": "../storage/img/students/ingpugberto.png",
+    "name": "Pugberto Rojas",
+    "email": "ing.pugberto@gmail.com",
+    "phone": "1234",
+    "enrollnumber": "2",
+    "date": "2025-03-09T20:22"
   }
 ]
