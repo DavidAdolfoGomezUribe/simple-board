@@ -5,75 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud-operations-main</title>
     <link rel="stylesheet" href="../css/payment.css">
-    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header class="headercontainer">
-    <button id="menuToggle" class="menu-btn"> <img src="../storage/img/buttontoggle.svg" alt=""></button>
-    <!-- Botón para abrir el menú -->
-    <div>
-        <div>
-            <input type="text" placeholder="Search...">
-            <img src="../storage/img/search 1.svg" alt="">
+    <div class="menu_grande">
+        <div class="nombre_pagina">
+            <span>CRUD OPERATIONS</span>
         </div>
-        <img src="../storage/img/bellIcon.svg" alt="">
-
+        <section class="section_info">
+            <img src="../storage/img/karti.png">
+            <span>Karthi Madesh</span>
+            <p>Admin</p>
+        </section>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../storage/img/graduation-cap 1.svg">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../storage/img/sliders-v-square 1.svg">
+                        <span>Course</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../storage/img/graduation-cap 1.svg">
+                        <span>Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../storage/img/usd-square 1.svg">
+                        <span>Payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../storage/img/file-chart-line 1.svg">
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../storage/img/sliders-v-square 1.svg">
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="../index.html">
+            <div class="sign-out">
+                <span>Logout</span>
+                <img src="../storage/img/sign-out-alt 1.svg">
+            </div>
+        </a>
     </div>
 
-</header>
-
-     <!-- menu-->
-
-<nav id="sidebar" class="sidebar">
-    <h1>CRUD OPERATIONS</h1>
-    <img src="../storage/img/karti.png" alt="">
-    <h2>Karthi Madesh</h2>
-    <p>Admin</p>
+    <main>
+        <div class="header">
+            <div class="flecha">
+                <img id="flechita" src="../storage/img/1.svg" alt="">
+            </div>
+            <div class="div_search">
+                <div class="Search">
+                    <p>Search</p>
+                    <img src="../storage/img/2.svg" alt="">
+                </div>
+                <div class="campanita">
+                    <img src="../storage/img/3.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="div__container">
+            <div class="div__header">
+                <h2>Payments Details</h2>   
+                <img src="../storage/img/bookmark 1.svg" alt="">
+            </div>
+            <dialog id="dialog__add_payment">
+                <div class="div__header">
+                    <span id="dialog__close_payment">x</span>
+                </div>
+                <div class="div__main">
+                    <form class="form_1" action="?" method="post" id="form__payment">
+                        <div>
+                            <label>Name</label>
+                            <input type="text" name="name">
+                        </div>
+                        <div>
+                            <label>Bill Number</label>
+                            <input type="text" name="bill_number">
+                        </div>
+                        <div>
+                            <label>Amount Paid</label>
+                            <input type="number" name="amount_paid">
+                        </div>
+                        <div>
+                            <label>Balance Amount</label>
+                            <input type="number" name="balance_amount">
+                        </div>
+                        <div>
+                            <label>Date</label>
+                            <input type="date" name="payment_date">
+                        </div>
+                        <input type="submit" value="Guardar">
+                    </form>
+                </div>
+                <div class="div__footer"></div>
+            </dialog>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Bill Number</th>
+                        <th>Amount Paid</th>
+                        <th>Balance Amount</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table__payments">
+                    <!-- Las filas de pagos se agregarán dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </main>
     
-    <ul>
-        <li data-option="home" class="active">
-            
-            <img src="../storage/img/casita.svg" alt="">
-            <button>Home</button>
-            
-        </li>
-         
-        <li data-option="course">
-            <img src="../storage/img/file-chart-line 1.svg" alt="">
-            <button>Course</button>
-        </li>
-
-         <li data-option="students">
-            <img src="../storage/img/graduation-cap 1.svg" alt="">
-            <button>Students</button>
-        </li>
-        
-        <li data-option="payment">
-            <img src="../storage/img/sliders-v-square 1.svg" alt="">
-            <button>Payment</button>
-        </li>
-        
-        <li data-option="report">
-            <img src="../storage/img/bookmark 1.svg" alt="">
-            <button>Report</button>
-        </li>
-        
-        <li data-option="settings">
-            <img src="../storage/img/usd-square 1.svg" alt="">
-            <button>Settings</button>
-        </li>
-        
-    </ul>
-    
-    <!-- logout-->
-
-    <div>
-        <p>Logout</p>
-        <img src="../storage/img/sign-out-alt 1.svg" alt="">
-        
-    </div>
- 
-</nav>
 
 </body>
 </html>
